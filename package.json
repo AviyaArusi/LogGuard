@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/AviyaArusi/LogGuard",
+  "homepage": "https://aviyaarusi.github.io/LogGuard",
   
   "scripts": {
     "dev": "vite",
