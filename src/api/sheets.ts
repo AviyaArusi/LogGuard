@@ -2,6 +2,13 @@ import { Employee, AttendanceRow, TotalsRow } from '../types';
 import { DAILY_RATE, GOOGLE_SHEETS_API_KEY, SPREADSHEET_ID, EMPLOYEES_SHEET_NAME, ATTENDANCE_SHEET_NAME, TOTALS_SHEET_NAME } from '../constants';
 import bcrypt from 'bcryptjs/dist/bcrypt';
 
+console.log("✅ SPREADSHEET_ID =", SPREADSHEET_ID);
+console.log("✅ API_KEY =", GOOGLE_SHEETS_API_KEY);
+
+if (!SPREADSHEET_ID) {
+  throw new Error("❌ SPREADSHEET_ID is undefined. Make sure your environment variables are set correctly.");
+}
+
 // Extract only the spreadsheet ID if a full URL is provided
 const SHEET_ID = SPREADSHEET_ID.includes('/d/')
   ? SPREADSHEET_ID.split('/d/')[1].split('/')[0]
